@@ -9,7 +9,8 @@
 <body>
     <h1>Movies</h1>
     {% for movie in movies %}
-    <a href="{% url 'movie' movie.id %}"><h2>{{ movie.title }}</h2></a>
+        <a href="{% url 'movie' movie.id %}"><h2>{{ movie.title }}</h2></a>
+        Average rating: {{ movie.average_rating }} / 5 - Number of reviews : {{ movie.num_reviews }}
     {% endfor %}
 </body>
 </html>
